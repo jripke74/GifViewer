@@ -60,13 +60,13 @@
 			children = (
 				8959B44A1F35F8D4007FF0FE /* AppDelegate.h */,
 				8959B44B1F35F8D4007FF0FE /* AppDelegate.m */,
+				8959B45E1F360549007FF0FE /* CollectionViewController.h */,
+				8959B45F1F360549007FF0FE /* CollectionViewController.m */,
 				8959B4501F35F8D4007FF0FE /* Main.storyboard */,
 				8959B4531F35F8D4007FF0FE /* Assets.xcassets */,
 				8959B4551F35F8D4007FF0FE /* LaunchScreen.storyboard */,
 				8959B4581F35F8D4007FF0FE /* Info.plist */,
 				8959B4471F35F8D4007FF0FE /* Supporting Files */,
-				8959B45E1F360549007FF0FE /* CollectionViewController.h */,
-				8959B45F1F360549007FF0FE /* CollectionViewController.m */,
 			);
 			path = GifViewer;
 			sourceTree = "<group>";
