@@ -11,6 +11,8 @@
 
 @interface CollectionViewController ()
 
+@property (strong, nonatomic) NSArray *imageURLs;
+
 @end
 
 @implementation CollectionViewController
@@ -18,8 +20,23 @@
 static NSString * const reuseIdentifier = @"GifViewerCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self refreshImages];
 }
 
+- (void) refreshImages {
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:@"https://api.giphy.com/v1/gifs/trending?api_key=9dc2138ab98c4473914f6f479bd035ee&rating=pg"];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSString *responseText = [[NSString alloc] initWithContentsOfURL:location encoding:NSUTF8StringEncoding error:nil];
+        NSData *data = [[NSData alloc] initWithContentsOfURL:location];
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSLog(@"response dictionary: %@", dictionary);
+        // data array > images > downsized_still > url
+        self.imageURLs = [dictionary valueForKeyPath:@"data.images.downsized_still.url"];
+        NSLog(@"%@", self.imageURLs);
+    }];
+    [task resume];
+}
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
