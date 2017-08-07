@@ -11,7 +11,7 @@
 @interface Giphy : NSObject
 
 @property (strong, nonatomic) NSURL *stillImageURL;
-@property (strong, nonatomic) NSURL *animalGifURL;
+@property (strong, nonatomic) NSURL *animatedGifURL;
 
 + (instancetype) giphyWithDictionary:(NSDictionary *) dictionary;
 

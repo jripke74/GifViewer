@@ -9,6 +9,7 @@
 #import "CollectionViewController.h"
 #import "CollectionViewCell.h"
 #import "Giphy.h"
+#import "DetailViewController.h"
 
 @interface CollectionViewController ()
 
@@ -45,6 +46,16 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
     }];
     [task resume];
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetail"]) {
+        NSIndexPath *selectedIndexPath = [self.collectionView indexPathsForSelectedItems][0];
+        Giphy *giphy = self.giphys[selectedIndexPath.row];
+        DetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.giphy = giphy;
+    }
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -59,5 +70,9 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
     Giphy *giphy = [self.giphys objectAtIndex:indexPath.row];
     cell.giphy = giphy;
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 @end

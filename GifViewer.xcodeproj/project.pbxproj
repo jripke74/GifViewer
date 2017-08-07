@@ -15,6 +15,7 @@
 		8959B4601F360549007FF0FE /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B45F1F360549007FF0FE /* CollectionViewController.m */; };
 		8959B4631F36380F007FF0FE /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B4621F36380F007FF0FE /* CollectionViewCell.m */; };
 		8959B4661F389E57007FF0FE /* Giphy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B4651F389E57007FF0FE /* Giphy.m */; };
+		8959B4691F38A5B6007FF0FE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B4681F38A5B6007FF0FE /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		8959B4621F36380F007FF0FE /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		8959B4641F389E57007FF0FE /* Giphy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Giphy.h; sourceTree = "<group>"; };
 		8959B4651F389E57007FF0FE /* Giphy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Giphy.m; sourceTree = "<group>"; };
+		8959B4671F38A5B6007FF0FE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8959B4681F38A5B6007FF0FE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				8959B44B1F35F8D4007FF0FE /* AppDelegate.m */,
 				8959B45E1F360549007FF0FE /* CollectionViewController.h */,
 				8959B45F1F360549007FF0FE /* CollectionViewController.m */,
+				8959B4671F38A5B6007FF0FE /* DetailViewController.h */,
+				8959B4681F38A5B6007FF0FE /* DetailViewController.m */,
 				8959B4611F36380F007FF0FE /* CollectionViewCell.h */,
 				8959B4621F36380F007FF0FE /* CollectionViewCell.m */,
 				8959B4641F389E57007FF0FE /* Giphy.h */,
@@ -166,6 +171,7 @@
 				8959B4661F389E57007FF0FE /* Giphy.m in Sources */,
 				8959B4631F36380F007FF0FE /* CollectionViewCell.m in Sources */,
 				8959B4601F360549007FF0FE /* CollectionViewController.m in Sources */,
+				8959B4691F38A5B6007FF0FE /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

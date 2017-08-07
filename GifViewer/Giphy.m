@@ -13,7 +13,7 @@
 + (instancetype) giphyWithDictionary:(NSDictionary *) dicionary {
     Giphy *giphy = [[Giphy alloc] init];
     if (giphy) {
-        giphy.animalGifURL = [NSURL URLWithString:[dicionary valueForKeyPath:@"images.original.url"]];
+        giphy.animatedGifURL = [NSURL URLWithString:[dicionary valueForKeyPath:@"images.original.url"]];
         giphy.stillImageURL = [NSURL URLWithString:[dicionary valueForKeyPath:@"images.downsized_still.url"]];
     }
     return giphy;
