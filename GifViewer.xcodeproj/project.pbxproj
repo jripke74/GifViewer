@@ -14,6 +14,7 @@
 		8959B4571F35F8D4007FF0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8959B4551F35F8D4007FF0FE /* LaunchScreen.storyboard */; };
 		8959B4601F360549007FF0FE /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B45F1F360549007FF0FE /* CollectionViewController.m */; };
 		8959B4631F36380F007FF0FE /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B4621F36380F007FF0FE /* CollectionViewCell.m */; };
+		8959B4661F389E57007FF0FE /* Giphy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959B4651F389E57007FF0FE /* Giphy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		8959B45F1F360549007FF0FE /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		8959B4611F36380F007FF0FE /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		8959B4621F36380F007FF0FE /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		8959B4641F389E57007FF0FE /* Giphy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Giphy.h; sourceTree = "<group>"; };
+		8959B4651F389E57007FF0FE /* Giphy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Giphy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				8959B45F1F360549007FF0FE /* CollectionViewController.m */,
 				8959B4611F36380F007FF0FE /* CollectionViewCell.h */,
 				8959B4621F36380F007FF0FE /* CollectionViewCell.m */,
+				8959B4641F389E57007FF0FE /* Giphy.h */,
+				8959B4651F389E57007FF0FE /* Giphy.m */,
 				8959B4501F35F8D4007FF0FE /* Main.storyboard */,
 				8959B4531F35F8D4007FF0FE /* Assets.xcassets */,
 				8959B4551F35F8D4007FF0FE /* LaunchScreen.storyboard */,
@@ -158,6 +163,7 @@
 			files = (
 				8959B44C1F35F8D4007FF0FE /* AppDelegate.m in Sources */,
 				8959B4491F35F8D4007FF0FE /* main.m in Sources */,
+				8959B4661F389E57007FF0FE /* Giphy.m in Sources */,
 				8959B4631F36380F007FF0FE /* CollectionViewCell.m in Sources */,
 				8959B4601F360549007FF0FE /* CollectionViewController.m in Sources */,
 			);
@@ -320,6 +326,7 @@
 				8959B45D1F35F8D4007FF0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
