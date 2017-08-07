@@ -27,12 +27,12 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
 
 - (void) refreshImages {
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"https://api.giphy.com/v1/gifs/trending?api_key=9dc2138ab98c4473914f6f479bd035ee&rating=pg"];
+    NSURL *url = [NSURL URLWithString:@"https://api.giphy.com/v1/gifs/search?q=apple&api_key=9dc2138ab98c4473914f6f479bd035ee"];
     self.giphys = [NSMutableArray array];
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        NSLog(@"response dictionary: %@", dictionary);
+        NSLog(@"response dictionary: %@", url);
         // data array > images > downsized_still > url
         NSArray *dictionaries = [dictionary valueForKey:@"data"];
         for (NSDictionary *dict in dictionaries) {
