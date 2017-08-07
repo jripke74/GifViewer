@@ -27,13 +27,15 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:@"https://api.giphy.com/v1/gifs/trending?api_key=9dc2138ab98c4473914f6f479bd035ee&rating=pg"];
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSString *responseText = [[NSString alloc] initWithContentsOfURL:location encoding:NSUTF8StringEncoding error:nil];
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         NSLog(@"response dictionary: %@", dictionary);
         // data array > images > downsized_still > url
         self.imageURLs = [dictionary valueForKeyPath:@"data.images.downsized_still.url"];
         NSLog(@"%@", self.imageURLs);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
     }];
     [task resume];
 }
@@ -42,12 +44,14 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 49;
+    return [self.imageURLs count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:@"CRW_9221"];
+    // configure cell
+    NSString *urlString = self.imageURLs[indexPath.row];
+    cell.urlString = urlString;
     return cell;
 }
 @end
